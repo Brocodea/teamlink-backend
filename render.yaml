@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: teamlink-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: JWT_SECRET
+        value: 08f098a0de7e1a02b9bb727edcd4229a2f4713b55dc0c873c4dd4f2d1d800c773076040948e6735dbfbdc0b2cdae388055373310cea7ea3f5dbf5fabf7701e8c
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: MONGODB_URI
+        sync: false
